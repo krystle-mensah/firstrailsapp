@@ -13,3 +13,52 @@
  *= require_tree .
  *= require_self
  */
+ 
+ /* APP.HTML */
+h1 {
+ 	font-family: 'Mina', sans-serif;
+ 	text-align: center;
+}
+
+
+nav.navbar.navbar-default {
+	background-color: #333;
+ 	color: #fff; 
+}
+
+
+footer.footer {
+	background-color: #333;
+ 	text-align: center;
+ 	position: absolute;
+ 	border: 2.5px #b32d00 solid;
+ 	color: #fff; 
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+    .container {
+    	/*none at the moment*/
+
+    }
+        p.footer-text {
+    	    padding-top: 15px;
+        }
+
+
+/* index.html */
+h1.index {
+	color:  #ffb366;
+}
+
+
+/* contact */
+h1.contact {
+	color:  #b3b3ff;
+}
+
+
+/* about */
+h1.about {
+    color: #b3b300;
+}
