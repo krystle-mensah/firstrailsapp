@@ -1,6 +1,8 @@
+<!--shows a listing of all products. This page is conected to the product controller-->
+
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1 class="product_index_title"></h1>New Products</h1>
 
 <table>
   <thead>
@@ -8,7 +10,7 @@
       <th>Name</th>
       <th>Description</th>
       <th>Image url</th>
-      <th colspan="3"></th>
+      <th colspan="3"></th> 
     </tr>
   </thead>
 
@@ -26,11 +28,6 @@
   </tbody>
 </table>
 
-<% paragraph_number = 1 %>
-<% 5.times do %>
-  <p>This is paragraph number <%= paragraph_number %></p>
-  <% paragraph_number = paragraph_number + 1 %>
-<% end %>
 
 <br>
 

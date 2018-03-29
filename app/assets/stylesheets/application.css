@@ -13,18 +13,33 @@
  *= require_tree .
  *= require_self
  */
- 
- 
- /* APP.HTML */
-h1 {
- 	font-family: 'Mina', sans-serif;
- 	text-align: center;
+
+body.application {
+	width: 100%;
+	position: relative;
+	top: 40px;
+	/*background-color: antiquewhite;*/
 }
 
 
+ h1 {
+ 	font-family: 'Mina', sans-serif;
+	text-align: center;
+	position: relative;
+    top: 52px;
+}
+
+/*NAV BAR*/
+a.navbar-brand {
+	font-family: 'Monoton', cursive;
+	color: red;
+}
 nav.navbar.navbar-default {
 	background-color: #333;
  	color: #fff; 
+}
+nav.navbar.navbar-inverse.navbar-fixed-top{
+	border-color: #b32d00;
 }
 
 
@@ -39,23 +54,9 @@ footer#footer {
     height: 60px;
 }
 p.footer-text {
-	padding-top: 15px;
+	padding-top: 15px; 
 }
 
 
-/* index.html */
-h1.index {
-	color:  #ffb366;
-}
 
 
-/* contact */
-h1.contact {
-	color:  #b3b3ff;
-}
-
-
-/* about */
-h1.about {
-    color: #b3b300;
-}

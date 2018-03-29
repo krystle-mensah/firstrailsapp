@@ -3,8 +3,9 @@ class ProductsController < ApplicationController
 
   # GET /products
   # GET /products.json
-  def index
-    @products = Product.all
+  
+  def index #corresponds to the index.html.erb page inside the views/products folder 
+    @products = Product.all #represents an array with all the entries in the products table in the database
   end
 
   # GET /products/1
@@ -15,7 +16,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
-  end
+  end 
 
   # GET /products/1/edit
   def edit
