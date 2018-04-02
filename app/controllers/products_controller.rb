@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
   
 	def index #corresponds to the index.html.erb page inside the views/products folder 
 		@products = Product.all #represents an array with all the entries in the products table in the database
-		@test_variable = 42
 	end
 
 	# GET /products/1
