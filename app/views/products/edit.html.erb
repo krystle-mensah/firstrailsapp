@@ -4,5 +4,6 @@
 
 <%= render 'form', product: @product %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<%= link_to 'Show', @product, :class => 'edit_button' %> 
+<%= link_to 'Back', products_path, :class => 'edit_page_back_button' %>
+

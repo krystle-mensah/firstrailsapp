@@ -7,7 +7,7 @@
 
 <br>
 
-<div class="container-fluid">
+<div class="container-fluid" id="all_products">
 	<div class="row">
 		<% @products.each do |product| %>
 			<div class="col-sm-2 col-md-4">
@@ -23,4 +23,4 @@
 	</div><!-- /. row -->
 </div><!--/. container-fluid -->
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path, id: "new_product_button" %>

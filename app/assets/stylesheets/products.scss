@@ -3,5 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 h1.product_index_title {
-    background-color: aqua;
+    background-color:#999999;
+}
+
+
+
+/*new.html.erb*/
+a.back_button {
+    position: relative;
+    left: 10px;
+    top: 200px;
+}
+
+div#new_product_form {
+    position: relative;
+    top: 100px;
+    left: 10px;
+}
+
+
+a#new_product_button{
+    position: relative;
+    left: 10px;
+    top: 200px;
+}
+
+
+div#all_products{
+    position: relative;
+    top: 90px;
+}
+
+a.edit_page_back_button{
+    position: relative;
+    left: 10px;
+    top: 200px;
+
+}
+
+a.edit_button{ 
+    position: relative;
+    left: 10px;
+    top: 200px;
 }
