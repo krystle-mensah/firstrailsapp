@@ -11,14 +11,16 @@
 	<div class="row">
 		<% @products.each do |product| %>
 			<div class="col-sm-2 col-md-4">
-				<a href="#"><%= product.name %></a>
-				<p><%= product.description %></p>
+				<a href="#"><h2><%= product.name %></h2></a>
+			    <p><%= product.description %></p>
+				<p><%= product.color %></p>
+				<%= image_tag(product.image_url, class: "img-responsive") %>
 				<strong>£ 42</strong>
-				<%= image_tag(product.image_url) %>
+				
 				<%= link_to 'Show', product %>
 				<%= link_to 'Edit', edit_product_path(product) %>
 				<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-			</div><!-- /col -->
+			</div><!-- ./col -->
 		<% end %>
 	</div><!-- /. row -->
 </div><!--/. container-fluid -->

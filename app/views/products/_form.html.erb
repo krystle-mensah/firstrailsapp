@@ -24,6 +24,7 @@
 				<%= form.text_area :description, id: :product_description %>
 			</div>
 
+			
 			<div class="field">
 				<%= form.label :image_url %>
 				<%= form.text_field :image_url, id: :product_image_url %>
@@ -31,6 +32,11 @@
 
 			<div class="actions">
 				<%= form.submit %>
+			</div>
+			
+			<div class="field">
+				<%= f.label :color %><br>
+				<%= f.text_field :color %>
 			</div>
 		</div><!-- /. row -->
 	</div><!-- /. container -->
