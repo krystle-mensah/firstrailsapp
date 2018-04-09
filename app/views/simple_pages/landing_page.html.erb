@@ -1,7 +1,6 @@
 <header class"container">
     <div class="row">
         <div class="col-sm-12">
-
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -12,20 +11,15 @@
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
-                    
-                    <div class="item active">
-                        <img src="..." alt="...">
-                    <div class="carousel-caption">
-
-                    <div class="item">
-                        <img src="..." alt="...">
-                    <div class="carousel-caption">
-                        ...
-                    </div>
-
-                
-                
-                </div><!-- ./ -->
+                    <% @products.each do |product| %>
+                    <div class= "item <%= "active" if product === @products.first%>">
+				        <%= image_tag(product.image_url, class: "img-responsive") %>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-text"><%= product.name %></h3>
+                        </div><!--./ carousel-caption -->
+                    </div><!--./ @products.first -->
+                    <% end %>
+                </div><!--./carousel-inner -->    
 
                 <!-- Controls -->
                 <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -36,12 +30,11 @@
                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>
-            </div>
-        </div><!-- ./ col-sm-12 -- >             
-    </div><!-- ./ row  -- >        
+            </div><!-- ./ carousel slide -->
+        </div><!-- ./ col-sm-12 -->             
+    </div><!-- ./ row  -->        
 </header><!-- /. container  -->
     
 
+<%# <h3 class="featured_product_title">Featured Product:</h3> %>
 
-
-<h3 class="featured_product_title">Featured Product:</h3>

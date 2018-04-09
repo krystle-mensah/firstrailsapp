@@ -10,7 +10,7 @@
 <div class="container-fluid" id="all_products">
 	<div class="row">
 		<% @products.each do |product| %>
-			<div class="col-sm-2 col-md-4">
+			<div class="col-sm-3 col-md-4">
 				<a href="#"><h2><%= product.name %></h2></a>
 			    <p><%= product.description %></p>
 				<p><%= product.color %></p>
@@ -25,4 +25,4 @@
 	</div><!-- /. row -->
 </div><!--/. container-fluid -->
 
-<%= link_to 'New Product', new_product_path, id: "new_product_button" %>
+<%= link_to 'New Product', new_product_path, id: "new_product_button" %> 
