@@ -22,7 +22,7 @@ class ProductsController < ApplicationController
 
 	# GET /products/1/edit
 	def edit
-	end
+	end 
 
 	# POST /products
 	# POST /products.json
