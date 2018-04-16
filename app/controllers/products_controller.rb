@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   # GET /products.json
   
 	def index 
-		@products = Product.all #represents an array with all the entries in the products table in the database
+		@products = Product.all
+		@test_variable = 42 
 	end
 
 	# GET /products/1
