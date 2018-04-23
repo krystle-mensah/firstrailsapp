@@ -1,10 +1,16 @@
 <%# This will simple display a list of all the orders we have with their numbers. %>
 
+<%# We should now have a list of orders with their numbers. Below each order is a link to the order with some information about it. %>
+
 <div class="row">
     <% @orders.each do |order| %>
         <div class="col-sm-3 col-md-4">
-        <h1>Order # <%= order.id %></h1> <!-- i dont understand the order # what does it stand for ? -->
-        </div><!-- /col -->
+            <h1>
+                Order # <%= order.id %>:
+                <%= link_to order.product.name, order %>
+            </h1> <!-- i dont understand the order # what does it stand for ? -->
+            <p><%= order.product.description %></p>
+            <strong>$ <%= order.product.price %></strong>
+        </div><!-- /.col -->
     <% end %>
-</div>
-
+</div><!-- /.row -->
