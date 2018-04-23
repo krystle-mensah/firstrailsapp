@@ -1,0 +1,11 @@
+<%# Below is the code for a basic layout, but feel free to style and change it however you want: %>
+
+<%# Now when you click on a order, you should see all of the information from that order. This will help the customer review their order and get any relevant information they need. %>
+
+<div class="container">
+    <h2>Order Information</h2>
+    <strong>Order ID: </strong><%= @order.id %>
+    <strong>Product Name: </strong><%= @order.product.name %>
+    <strong>Product Price: </strong><%= number_to_currency(@order.product.price/100.to_f) %>
+    <strong>Total Price: </strong><%= number_to_currency(@order.total/100.to_f) %>
+</div>

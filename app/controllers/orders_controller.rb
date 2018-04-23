@@ -4,7 +4,10 @@ class OrdersController < ApplicationController
         @orders = Order.all
     end
   
+    # When the user clicks on the order in the order index page, it will link to the show page. Let's say we click on the order with the ID of 1. The url would be /orders/1. Once we go to that order, the show page will be rendered just like how the products work.
+    
     def show
+        @order = Order.find(params[:id])
     end
   
     def new
