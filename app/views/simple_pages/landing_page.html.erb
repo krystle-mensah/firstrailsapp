@@ -1,7 +1,7 @@
 
-<h3 class="featured_product_title">Featured Product:</h3>
 
-<%# <%= @featured_product.name %>
+
+
 
 
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -16,9 +16,11 @@
 		<div class="carousel-inner" role="listbox">
 			<% @products.each do |product| %>
 			<div class="item<%= " active" if product == @products.first %>">
-				<%= image_tag(product.image_url) %>
+				<% if product.image_url %>
+					<%= image_tag(product.image_url, class: "img-responsive")%>
+				<% end %>
 				<div class="carousel-caption">
-					<%= product.name %>
+					<h3><%= product.name %></h3>
 				</div>
 			</div>
 			<% end %>
@@ -33,5 +35,9 @@
 		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
 		<span class="sr-only">Next</span>
 	</a>
-</div> 
+</div>
+
+<h3 class="featured_product_title">Featured Product:</h3>
+
+<%= @featured_product.name %> 
 

@@ -2,8 +2,8 @@
 
 <h1>Editing Product</h1>
 
-<%= render 'form', product: @product %>
+<%= render partial: 'form', product: @product %> <!-- The form being referenced here is a type of view called a partial templete. The parameters is "product" so im keeping the partial word. im not sure --> 
 
 <%= link_to 'Show', @product, :class => 'edit_button' %> 
-<%= link_to 'Back', products_path, :class => 'edit_page_back_button' %>
+<%= link_to 'Back', products_path, :class => 'edit_page_back_button' %> 
 

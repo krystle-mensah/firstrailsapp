@@ -2,6 +2,6 @@
 
 <h1>New Product</h1>
 
-<%= render 'form', product: @product %>
+<%= render partial: 'form', product: @product %> <!-- The form being referenced here is a type of view called a partial templete. The permiter is "product" so im keeping the partial word --> 
 
-<%= link_to 'Back', products_path, :class => 'back_button' %> 
+<%= link_to 'Back', products_path, :class => 'back_button' %>   
