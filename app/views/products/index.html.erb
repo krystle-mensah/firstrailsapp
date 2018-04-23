@@ -5,27 +5,31 @@
 
 <h1 class="product_index_title">Products</h1>
 
+
 <br>
 
-<div class="container-fluid" id="all_products"> 
-	<div class="row">
-		<% @products.each do |product| %>
-			<div class="col-sm-3 col-md-4">
-				<a href="#"><h2><%= product.name %></h2></a>
-			    <p><%= product.description %></p>
-				<p><%= product.colour %></p>
-				<% if product.image_url.present? %>
-				    <%= image_tag(product.image_url, class: "img-responsive") %>
-				<% end %>
-				<strong>£ 42</strong>
-				<%= link_to 'Show', product %>
-				<%= link_to 'Edit', edit_product_path(product) %>
-				<%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-			</div><!-- ./col -->
-		<% end %>
-	</div><!-- /. row -->
-</div><!--/. container-fluid -->
+<%# The below code is now a condensed version of what is in my _product.html.erb. (i also took out my row code and container class code. im not sure i was supposed to do that. could you please clarify if this was correct.)  %>
 
-<%# <%= @test_variable %>
+<%# <% @products.each do |product| %> 
+    <%# <%= render partial: "product", locals: {product: product} %> 
+<%# <% end %>
+
+
+<%# The below code is also a shorthand method available in this case. If you have a partial that's the same name of a model (in this case, |product|), it will automatically set a local variable of the same name. Since that's also the variable we are passing to it, we can just call it like this:  %>
+
+<%# <% @products.each do |product| %>
+    <%# <%= render product %>
+<%# <% end %>
+
+
+<%# Because @products is an array of objects of the same model (called a collection in Rails terminology), we can condense the below code into a block of one line where we pass the array directly into the partial using the collection option:  (i dont understand the collection option properly. if you could explain this in more detail that would be much appreciated) %>
+
+<%# <%= render partial: "product", collection: @products %>
+
+
+<%# Even better, in cases like this where the objects of the collection Product objects in this case match the name of the partial, you can shorten this down even further: %>
+
+<%= render @products %>
+
 
 <%= link_to 'New Product', new_product_path, id: "new_product_button" %> 
