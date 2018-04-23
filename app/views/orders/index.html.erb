@@ -1,0 +1,10 @@
+<%# This will simple display a list of all the orders we have with their numbers. %>
+
+<div class="row">
+    <% @orders.each do |order| %>
+        <div class="col-sm-3 col-md-4">
+        <h1>Order # <%= order.id %></h1> <!-- i dont understand the order # what does it stand for ? -->
+        </div><!-- /col -->
+    <% end %>
+</div>
+
