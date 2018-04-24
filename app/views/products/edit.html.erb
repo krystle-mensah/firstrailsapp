@@ -2,7 +2,7 @@
 
 <h1>Editing Product</h1>
 
-<%= render partial: 'shared/form', locals: { product: product } %> <!-- The form being referenced here is a type of view called a partial templete. The parameters is "product" so im keeping the partial word. im not sure. This will enable you to access the product variable inside the partial. --> 
+<%= render partial: 'shared/form', locals: { _product: product } %> <!-- The form being referenced here is a type of view called a partial templete. The parameters is "product" so im keeping the partial word. im not sure. This will enable you to access the product variable inside the partial. --> 
 
 <%= link_to 'Show', @product, :class => 'edit_button' %> 
 <%= link_to 'Back', products_path, :class => 'edit_page_back_button' %> 
