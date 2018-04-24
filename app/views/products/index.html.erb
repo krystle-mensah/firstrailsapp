@@ -24,12 +24,14 @@
 
 <%# Because @products is an array of objects of the same model (called a collection in Rails terminology), we can condense the below code into a block of one line where we pass the array directly into the partial using the collection option:  (i dont understand the collection option properly. if you could explain this in more detail that would be much appreciated) %>
 
-<%= render partial: "product", collection: @products %>
+<%# <%= render partial: "product", collection: @products %>
 
 
 <%# Even better, in cases like this where the objects of the collection Product objects in this case match the name of the partial, you can shorten this down even further: %>
 
-<%# <%= render @products %>
+<%# <%= render @products  %>
+
+<%= render 'shared/product', locals: { product: @product } %> 
 
 
 <%= link_to 'New Product', new_product_path, id: "new_product_button" %> 
