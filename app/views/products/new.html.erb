@@ -2,7 +2,7 @@
 
 <h1>New Product</h1>
 
-<%= render partial: 'shared/form', locals: { product: product } %> <!-- The form being referenced here is a type of view called a partial templete. The permiter is "product" so im keeping the partial word This will enable you to access the product variable inside the partial. --> 
+<%= render partial: 'shared/form', locals: { product: @product } %> <!-- The form being referenced here is a type of view called a partial templete. The permiter is "product" so im keeping the partial word This will enable you to access the product variable inside the partial. --> 
 
 
 <%= link_to 'Back', products_path, :class => 'back_button' %>   
